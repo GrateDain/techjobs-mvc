@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -33,6 +33,8 @@ public class SearchController {
         model.addAttribute("columns", ListController.columnChoices);
         model.addAttribute("title", "Jobs with " + searchType + ": " + searchTerm);
         model.addAttribute("jobs", jobs);
+        model.addAttribute("searchType", searchType);
+        model.addAttribute("searchTerm", searchTerm);
 
         return "search";
     }

@@ -37,6 +37,16 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <!-- TODO #4 - Optional enhanced no result comment -->
+    <!-- <p th:unless="${jobs} and ${jobs.size()}" id="noResult"
+       th:text="${'No results to show for  ' + searchType + ': ' +searchTerm }"></p> -->
+
+    <table class="job-listing" th:each="job : ${jobs}" th:fragment="results">
+        <tr th:each="j : ${job}">
+            <td th:text="${j.key}"></td>
+            <td th:text="${j.value}"></td>
+        </tr>
+    </table>
 
 </div>
 
