@@ -1,6 +1,6 @@
-package org.launchcode.controllers;
+package org.launchcode.techjobsmvc.controllers;
 
-import org.launchcode.models.JobData;
+import org.launchcode.techjobsmvc.models.JobData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package org.launchcode.models;
+package org.launchcode.techjobsmvc.models;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -22,7 +22,7 @@ public class JobData {
 
     private static ArrayList<HashMap<String, String>> allJobs;
 
-    /**
+    /*
      * Fetch list of all values from loaded data,
      * without duplicates, for a given column.
      *
@@ -59,7 +59,7 @@ public class JobData {
         return new ArrayList<>(allJobs);
     }
 
-    /**
+    /*
      * Returns results of search the jobs data by key/value, using
      * inclusion of the search term.
      *
@@ -89,7 +89,7 @@ public class JobData {
         return jobs;
     }
 
-    /**
+    /*
      * Search all columns for the given term
      *
      * @param value The search term to look for
@@ -119,7 +119,7 @@ public class JobData {
         return jobs;
     }
 
-    /**
+    /*
      * Read in data from a CSV file and store it in a list
      */
     private static void loadData() {
